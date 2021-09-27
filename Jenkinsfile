@@ -1,11 +1,13 @@
 pipeline{
     agent{
-        Dockerfile true
+        dockerfile true
     }
     stages{
-        stage("Dockerfile running"){
+        stage('Build'){
             steps{
                 echo "========executing the process========"
+                sh 'node --version'
+                sh 'pwd'
             }
         }
     }
